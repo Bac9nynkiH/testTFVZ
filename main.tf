@@ -10,7 +10,8 @@ output_path = "${path.module}/python/hello-python.zip"
  
 resource "aws_lambda_function" "terraform_lambda_func" {
 filename                       = "${path.module}/python/hello-python.zip"
-function_name                  = "Spacelift_Test_Lambda_Function"
+function_name                  = "test_l_f"
+role                           = arn:aws:iam::531190140983:role/service-role/testFc-role-l1r1aw1v
 handler                        = "index.lambda_handler"
 runtime                        = "python3.8"
 }
